@@ -256,7 +256,16 @@ svg:hover {
 }
 
 
-
+::-webkit-scrollbar{
+    width: 10px;
+    background: linear-gradient(transparent, var(--color-opcion-2), var(--color-opcion-4), transparent);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-plateado-transparente-1);
+    border-radius: 50px;
+    filter: opacity(1);
+}
 
 /* Animaciones */
 @keyframes fondo-1 {
