@@ -32,13 +32,13 @@
     right: -10px;
     filter: opacity(.5) blur(20px);
     border-radius: 50%;
-    animation: fondo-1 5s linear normal infinite;
+    animation: fondo-1 3s linear normal infinite;
 }
 .fondo::after {
     top: 110px;
     left: 170px;
     background-image: radial-gradient( var(--color-opcion-2), transparent 70%);
-    animation: fondo-2 5s linear normal infinite;
+    animation: fondo-2 2s linear normal infinite;
 }
 
 
@@ -206,32 +206,54 @@ svg:hover {
 
 
 .contactar {
-    width: 100%;
-    height: 254px;
-    padding: 10px;
-    border-radius: 10px 20px;
-    box-shadow: 7px 5px 10px 5px var(--color-plateado-transparente-2);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: auto auto;
+    background: var(--color-plateado-transparente-2);
+    padding: 15px;
+    border-radius: 20px;
+    position: relative;
 }
-
-
-.input-email, .input-email::placeholder {
+.contactar::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(25px);
+    border-radius: 20px;
+    background-color: var(--color-opcion-1);
+    background-image: radial-gradient(at 10% 15%, var(--color-opcion-4), transparent 70%),
+    radial-gradient(at 80% 75%, var(--color-opcion-2), transparent 70%);
+}
+.input {
     height: 1.5rem;
+    outline: none;
     border: none;
     border-radius: 10px;
     padding: 3px;
-    background-color: var(--color-letras-2);
-    color: var(--color-blanco);
-    box-shadow: 2px 2px 5px var(--color-opcion-4);
+    background-color: var(--color-blanco);
+    color: var(--color-fondo);
 }
 .button {
+    align-self: center;
     border: none;
     height: 3rem;
     width: 6rem;
     background-color: var(--color-opcion-2);
-    border-radius: 5px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px var(--color-fondo);
+    transition: transform .3s;
 }
-
-
+.button:active {
+    box-shadow: inset 0px 4px 2px var(--color-fondo);
+    transform: translateY(1px) scale(.98);
+    transition: transform .2s;
+}
 
 
 
